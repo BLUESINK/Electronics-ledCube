@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:ledCube-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,7 +31,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:custom
 LIBS:ledCube-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -200,9 +201,9 @@ F 5 "CXA1304-0000-000N00B440F-ND" H 4075 4625 60  0001 C CNN "Part #"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3875 4625 3325 4625
+	3325 4625 3925 4625
 Wire Wire Line
-	4275 4625 4900 4625
+	4225 4625 4900 4625
 Text Label 3325 4625 0    60   ~ 0
 LED+/U
 Text Label 4550 4625 0    60   ~ 0
@@ -341,4 +342,39 @@ Text Notes 8050 2700 0    60   Italic 0
 Lower Board
 Text Notes 8050 4000 0    60   Italic 0
 Upper Board
+$Comp
+L R R3
+U 1 1 586A07C4
+P 3450 2925
+F 0 "R3" H 3520 2971 50  0000 L CNN
+F 1 "10k" V 3450 2850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3520 2834 50  0001 L CNN
+F 3 "" H 3450 2925 50  0000 C CNN
+	1    3450 2925
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 586A0877
+P 3450 3075
+F 0 "#PWR04" H 3450 2825 50  0001 C CNN
+F 1 "GND" H 3450 2925 50  0000 C CNN
+F 2 "" H 3450 3075 50  0000 C CNN
+F 3 "" H 3450 3075 50  0000 C CNN
+	1    3450 3075
+	1    0    0    -1  
+$EndComp
+Connection ~ 3450 2775
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 586A0E3F
+P 3425 3575
+F 0 "#FLG?" H 3425 3650 50  0001 C CNN
+F 1 "PWR_FLAG" H 3425 3749 50  0000 C CNN
+F 2 "" H 3425 3575 50  0000 C CNN
+F 3 "" H 3425 3575 50  0000 C CNN
+	1    3425 3575
+	1    0    0    -1  
+$EndComp
+Connection ~ 3425 3575
 $EndSCHEMATC
